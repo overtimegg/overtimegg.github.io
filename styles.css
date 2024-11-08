@@ -5,6 +5,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400; 
     background-color: #f0f0f0;
 }
 
@@ -32,7 +33,7 @@ body {
     font-size: 16px;
     margin-bottom: 10px;
     font-family: 'Source Sans 3', sans-serif;
-    font-weight: 400;
+    font-weight: 400; 
 }
 
 .emoji-box {

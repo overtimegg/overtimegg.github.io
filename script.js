@@ -37,7 +37,7 @@ function generateImage() {
     const caption = document.getElementById("captionInput").value;
 
 
-    ctx.font = "70px 'Source Sans 3'";
+    ctx.font = "400 70px 'Source Sans 3'";
     ctx.fillStyle = "#000";
     ctx.textAlign = "left";
 
