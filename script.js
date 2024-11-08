@@ -53,7 +53,7 @@ function generateImage() {
 
 function downloadImage() {
     const link = document.createElement('a');
-    link.download = 'custom_image.png';
+    link.download = 'ot_background.png';
     link.href = canvas.toDataURL('image/png');
     link.click();
 }
