@@ -4,10 +4,8 @@ const ctx = canvas.getContext("2d");
 const backgroundImage = new Image();
 backgroundImage.src = 'background-image.png';
 backgroundImage.onload = () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+    generateImage();
 };
-
 
 function wrapText(context, text, x, y, maxWidth, lineHeight) {
     const words = text.split(' ');
@@ -29,13 +27,11 @@ function wrapText(context, text, x, y, maxWidth, lineHeight) {
     context.fillText(line, x, y);
 }
 
-
 function generateImage() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
 
     const caption = document.getElementById("captionInput").value;
-
 
     ctx.font = "400 70px 'Source Sans 3'";
     ctx.fillStyle = "#000";
@@ -44,22 +40,26 @@ function generateImage() {
     const padding = 80;
     const maxWidth = canvas.width - padding * 2;
     const x = 130;
-    const y = 350;
+    const y = parseInt(document.getElementById("yPositionSlider").value);
     const lineHeight = 80;
 
     wrapText(ctx, caption, x, y, maxWidth, lineHeight);
 }
 
+function updateYValueDisplay() {
+    const yPosition = document.getElementById("yPositionSlider").value;
+    document.getElementById("yValue").textContent = yPosition;
+}
 
 function downloadImage() {
     const link = document.createElement('a');
-    link.download = 'ot_background.png';
+    link.download = 'custom_image.png';
     link.href = canvas.toDataURL('image/png');
     link.click();
 }
 
-
 function insertEmoji(emoji) {
     const captionInput = document.getElementById("captionInput");
     captionInput.value += emoji;
+    generateImage(); // Update the canvas when an emoji is added
 }
