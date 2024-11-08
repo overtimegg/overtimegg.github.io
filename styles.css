@@ -16,8 +16,7 @@ body {
     width: 360px;
     height: 640px;
     border: 1px solid #ccc;
-    background: url('background-image.png') no-repeat center center;
-    background-size: cover;
+    background: #fff;
     margin-bottom: 20px;
 }
 
@@ -32,6 +31,8 @@ body {
     width: 80%;
     font-size: 16px;
     margin-bottom: 10px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
 }
 
 .emoji-box {

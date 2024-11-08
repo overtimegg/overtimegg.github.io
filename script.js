@@ -8,7 +8,7 @@ backgroundImage.onload = () => {
     ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
 };
 
-// Function to wrap and draw text on the canvas, including emojis
+
 function wrapText(context, text, x, y, maxWidth, lineHeight) {
     const words = text.split(' ');
     let line = '';
@@ -29,12 +29,13 @@ function wrapText(context, text, x, y, maxWidth, lineHeight) {
     context.fillText(line, x, y);
 }
 
-// Function to generate the canvas image with text and emojis
+
 function generateImage() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
 
     const caption = document.getElementById("captionInput").value;
+
 
     ctx.font = "70px 'Source Sans 3'";
     ctx.fillStyle = "#000";
@@ -43,13 +44,13 @@ function generateImage() {
     const padding = 80;
     const maxWidth = canvas.width - padding * 2;
     const x = 130;
-    const y = 370;
+    const y = 350;
     const lineHeight = 80;
 
     wrapText(ctx, caption, x, y, maxWidth, lineHeight);
 }
 
-// Function to download the generated image as a PNG
+
 function downloadImage() {
     const link = document.createElement('a');
     link.download = 'custom_image.png';
@@ -57,7 +58,7 @@ function downloadImage() {
     link.click();
 }
 
-// Function to insert an emoji character into the text input field
+
 function insertEmoji(emoji) {
     const captionInput = document.getElementById("captionInput");
     captionInput.value += emoji;
