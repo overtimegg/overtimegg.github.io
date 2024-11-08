@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+#imageCanvas {
+    width: 360px;
+    height: 640px;
+    border: 1px solid #ccc;
+    background: url('background-image.png') no-repeat center center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#captionInput {
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.emoji-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.emoji {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
