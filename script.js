@@ -61,5 +61,5 @@ function downloadImage() {
 function insertEmoji(emoji) {
     const captionInput = document.getElementById("captionInput");
     captionInput.value += emoji;
-    generateImage(); // Update the canvas when an emoji is added
+    generateImage(); 
 }
