@@ -27,13 +27,14 @@
         <canvas id="imageCanvas" width="1080" height="1920"></canvas>
         <div class="controls">
             <input type="text" id="captionInput" placeholder="Enter your caption here" class="source-sans-3-input" oninput="generateImage()">
-            <div class="emoji-box">
-                <span class="emoji" onclick="insertEmoji('😭')">😭</span>
-                <span class="emoji" onclick="insertEmoji('🔥')">🔥</span>
-                <span class="emoji" onclick="insertEmoji('💀')">💀</span>
-                <span class="emoji" onclick="insertEmoji('😂')">😂</span>
-		<span class="emoji" onclick="insertEmoji('👀')">👀</span>				
-            </div>
+<div class="emoji-box">
+    <img class="emoji" height="48" width="48" draggable="false" alt="😭" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f62d.png" onclick="insertEmoji('😭')">
+    <img class="emoji" height="48" width="48" draggable="false" alt="🔥" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f525.png" onclick="insertEmoji('🔥')">
+    <img class="emoji" height="48" width="48" draggable="false" alt="💀" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f480.png" onclick="insertEmoji('💀')">
+    <img class="emoji" height="48" width="48" draggable="false" alt="😂" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f602.png" onclick="insertEmoji('😂')">
+    <img class="emoji" height="48" width="48" draggable="false" alt="👀" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f440.png" onclick="insertEmoji('👀')">
+</div>
+
             <label for="yPositionSlider">Y Position: <span id="yValue">380</span></label>
             <input type="range" id="yPositionSlider" min="345" max="500" value="380" step="5" oninput="updateYValueDisplay(); generateImage();">
             <button onclick="downloadImage()">Download Image</button>
