@@ -122,3 +122,35 @@ body {
         margin-bottom:20px;
     }
 }
+@media (orientation: portrait) {
+.download-panel {
+    position: fixed; 
+    top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: auto; 
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.083333333in;
+    border: 0.75pt solid #ccc; }
+
+
+    #imageCanvas {
+        width:50%;
+        height:50%;
+        margin-top:200px;
+        margin-bottom:20px;
+    }
+
+    .container {
+        width:100%;
+        height:auto;
+        margin:0;
+    }
+
+    .controls {
+        width:90vw;
+        margin-right:0;
+        margin-bottom:20px;
+    }
+}
